@@ -12,16 +12,16 @@ router.get('/songs/:id', (req, res) => Song
 )
 
 // POST one song
-router.post('songs', (req, res) => Song
+router.post('/songs', (req, res) => Song
   .addSong(req.body, info => res.json(info)))
 
 // UPDATE a song
 
-router.put('songs/:id', (req, res) => Song
+router.put('/songs/:id', (req, res) => Song
   .updateSong(req.body, { id: req.params.id }, info => res.json(info)))
 
 // DELETE a song
-router.delete('songs/:id', (req, res) => Song
+router.delete('/songs/:id', (req, res) => Song
   .deleteSong({ id: req.params.id }, info => res.json(info)))
 
 module.exports = router
