@@ -7,7 +7,7 @@ router.get('/films', (req, res) => Film
 )
 
 // GET one film
-router.get('/films', (req, res) => Film
+router.get('/films/:id', (req, res) => Film
   .getFilmsWhere({ id: req.params.id }, film => res.json(film))
 )
 
@@ -16,10 +16,11 @@ router.post('films', (req, res) => Film
   .addFilm(req.body, info => res.json(info)))
 
 // UPDATE a film
-
 router.put('films/:id', (req, res) => Film
   .updateFilm(req.body, { id: req.params.id }, info => res.json(info)))
 
 // DELETE a film
 router.delete('films/:id', (req, res) => Film
   .deleteFilm({ id: req.params.id }, info => res.json(info)))
+
+module.exports = router

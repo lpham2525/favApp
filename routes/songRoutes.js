@@ -7,7 +7,7 @@ router.get('/songs', (req, res) => Song
 )
 
 // GET one song
-router.get('/songs', (req, res) => Song
+router.get('/songs/:id', (req, res) => Song
   .getSongsWhere({ id: req.params.id }, song => res.json(song))
 )
 
@@ -23,3 +23,5 @@ router.put('songs/:id', (req, res) => Song
 // DELETE a song
 router.delete('songs/:id', (req, res) => Song
   .deleteSong({ id: req.params.id }, info => res.json(info)))
+
+module.exports = router
