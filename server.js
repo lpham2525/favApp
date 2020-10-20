@@ -8,4 +8,7 @@ app.use(express.json())
 
 app.use(require('./routes'))
 
+app.engine('.hbs', require('express-handlebars')({ extname: '.hbs' }))
+app.set('view engine', '.hbs')
+
 app.listen(3000, () => console.log('Server is running for president?'))

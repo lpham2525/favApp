@@ -1,7 +1,7 @@
 const orm = require('../orm')
 
 module.exports = {
-  getAllFilms (cb) {
+  getFilms (cb) {
     orm.getAll('films', films => cb(films))
   },
   getFilmsWhere (where, cb) {

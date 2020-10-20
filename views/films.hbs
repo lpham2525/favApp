@@ -1,0 +1,16 @@
+<h1>Movies</h1>
+<form>
+  <p>
+    <label for='Title'>Title</label>
+    <input type='text' name='title' id='title'>
+  </p>
+  <button id="addMovie">Add Movie</button>
+</form>
+<ol id='movieList'>
+
+{{#each films}}
+<li>{{this.title}}</li>
+{{/each}}
+</ol>
+
+<script src='./film.js'></script>
