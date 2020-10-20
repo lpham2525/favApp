@@ -1,7 +1,17 @@
-<h1>Songs</h1>
-<ol>
+<h1>Favorite Songs</h1>
+<form>
+  <p>
+    <label for='Title'>Title</label>
+    <input type='text' name='title' id='song'>
+  </p>
+  <button id="addSong">Add Song</button>
+</form>
+<ol id = 'songList'>
   {{#each songs}}
-  <li>{{this.title}}</li>
+  <li>{{this.title}}
+  <button class='deleteSong' data-id={{this.id}}>Delete Song</button>
+  </li>
   {{/each}}
 </ol>
 
+<script src='./song.js'></script>

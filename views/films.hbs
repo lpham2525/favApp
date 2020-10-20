@@ -1,4 +1,4 @@
-<h1>Movies</h1>
+<h1>Favorite Movies</h1>
 <form>
   <p>
     <label for='Title'>Title</label>
@@ -9,7 +9,9 @@
 <ol id='movieList'>
 
 {{#each films}}
-<li>{{this.title}}</li>
+<li>{{this.title}}
+<button class='deleteMovie' data-id={{this.id}}>Delete</button>
+</li>
 {{/each}}
 </ol>
 
